@@ -317,7 +317,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             if(myNewHP == 0)
             {
-                Debug.Log("MORT!!!");
+                NetworkServer.UnSpawn(gameObject);
+                Destroy(gameObject);
             }
         }
         public void TakeDamage()
