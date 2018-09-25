@@ -39,7 +39,6 @@ GameObject:
   - component: {fileID: 4853835459082502}
   - component: {fileID: 33177183379096828}
   - component: {fileID: 23169805409213600}
-  - component: {fileID: 114275385270551562}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -158,17 +157,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1584689456583990}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114275385270551562
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1660500200853320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4de0ac9ecc57834cb220027ffbeb435, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &136677385970348310
 CapsuleCollider:
   m_ObjectHideFlags: 1
