@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityStandardAssets.CrossPlatformInput;
@@ -29,7 +30,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
+        [SyncVar(hook = "UpdateHP")]
+        public int PlayerHP;
         public Camera m_Camera;
+        public GameObject Laser;
+        private bool Shot = false;
         private bool m_Jump;
         private float m_YRotation;
         private Vector2 m_Input;
@@ -50,6 +55,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_Camera.enabled = false;
                 return;
+            }
+            if (isLocalPlayer)
+            {
+                gameObject.tag = "Untagged";
             }
             m_CharacterController = GetComponent<CharacterController>();
             m_OriginalCameraPosition = m_Camera.transform.localPosition;
@@ -90,6 +99,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+            Ray ray = m_Camera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+            if (Input.GetMouseButton(0) && Shot == false)
+            {
+                RaycastHit hit;
+                CmdDisplayLaserBeam();
+                if (Physics.Raycast(ray, out hit, 10f))
+                {
+                    if (hit.collider.CompareTag("Opponent"))
+                    {
+                        CmdHitOpponent(hit.collider.gameObject);
+                    }
+                }
+            }
         }
 
 
@@ -271,6 +293,42 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
+        }
+        [Command]
+        public void CmdDisplayLaserBeam()
+        {
+            RpcShowMyBeam();
+        }
+        [Command]
+        public void CmdHitOpponent(GameObject opponent)
+        {
+            opponent.GetComponent<FirstPersonController>().TakeDamage();
+        }
+        public void UpdateHP(int myNewHP)
+        {
+            if (isLocalPlayer)
+            {
+                Debug.Log("Damages");
+            }
+            if(myNewHP == 0)
+            {
+                Debug.Log("Dead");
+            }
+        }
+        public void TakeDamage()
+        {
+            PlayerHP -= 1;
+        }
+        [ClientRpc]
+        public void RpcShowMyBeam()
+        {
+            Laser.SetActive(true);
+            StartCoroutine(HideMyBeam());
+        }
+        public IEnumerator HideMyBeam()
+        {
+            yield return new WaitForSeconds(0.5f);
+            Laser.SetActive(false);
         }
     }
 }
