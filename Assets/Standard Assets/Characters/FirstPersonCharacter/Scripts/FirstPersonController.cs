@@ -52,6 +52,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Use this for initialization
         private void Start()
         {
+            PlayerHP = 2;
             if (!isLocalPlayer)
             {
                 m_Camera.enabled = false;
