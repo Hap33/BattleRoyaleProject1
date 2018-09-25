@@ -317,7 +317,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             if(myNewHP == 0)
             {
-                Destroy(gameObject);
+                Debug.Log("MORT!!!");
             }
         }
         public void TakeDamage()
