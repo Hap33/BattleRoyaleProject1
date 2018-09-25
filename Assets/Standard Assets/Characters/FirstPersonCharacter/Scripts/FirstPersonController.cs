@@ -34,7 +34,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public int PlayerHP;
         public Camera m_Camera;
         public GameObject Laser;
-        private bool Shot = false;
         private bool m_Jump;
         private float m_YRotation;
         private Vector2 m_Input;
@@ -106,7 +105,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
             Ray ray = m_Camera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
-            if (Input.GetMouseButton(0) && Shot == false)
+            if (Input.GetMouseButton(0))
             {
                 RaycastHit hit;
                 CmdDisplayLaserBeam();
@@ -318,7 +317,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             if(myNewHP == 0)
             {
-                Debug.Log("Dead");
+                Destroy(gameObject);
             }
         }
         public void TakeDamage()
