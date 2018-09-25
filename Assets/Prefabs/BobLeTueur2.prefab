@@ -761,7 +761,7 @@ MonoBehaviour:
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
   PlayerHP: 2
   m_Camera: {fileID: 20255951838418560}
-  Laser: {fileID: 1660500200853320, guid: 1adc91e652d1feb4087e25f71b60ca98, type: 2}
+  Laser: {fileID: 1519489017277068}
   Ears: {fileID: 81114592088190416}
 --- !u!114 &114113569806204158
 MonoBehaviour:
@@ -786,7 +786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TransformSyncMode: 1
-  m_SendInterval: 0.055555556
+  m_SendInterval: 0.04347826
   m_SyncRotationAxis: 7
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
