@@ -313,7 +313,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             if (isLocalPlayer)
             {
-                Debug.Log("Damages");
+                Debug.Log(myNewHP);
             }
             if(myNewHP == 0)
             {
