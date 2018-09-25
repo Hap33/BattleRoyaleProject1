@@ -105,7 +105,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
             Ray ray = m_Camera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButtonDown(0))
             {
                 RaycastHit hit;
                 CmdDisplayLaserBeam();
