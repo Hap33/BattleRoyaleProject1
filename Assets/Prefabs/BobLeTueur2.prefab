@@ -56,7 +56,6 @@ GameObject:
   - component: {fileID: 4970449040292842}
   - component: {fileID: 33364233197458840}
   - component: {fileID: 23489367812060378}
-  - component: {fileID: 114113569806204158}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -763,17 +762,6 @@ MonoBehaviour:
   m_Camera: {fileID: 20255951838418560}
   Laser: {fileID: 1519489017277068}
   Ears: {fileID: 81114592088190416}
---- !u!114 &114113569806204158
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1519489017277068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4de0ac9ecc57834cb220027ffbeb435, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114742358188282586
 MonoBehaviour:
   m_ObjectHideFlags: 1
