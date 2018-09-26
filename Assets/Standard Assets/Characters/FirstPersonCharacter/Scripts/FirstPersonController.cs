@@ -375,8 +375,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public IEnumerator HideMyBeam()
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.1f);
             Laser.SetActive(false);
+            yield return new WaitForSeconds(0.5f);
             Shot = false;
         }
 
