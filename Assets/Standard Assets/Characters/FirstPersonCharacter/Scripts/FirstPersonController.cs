@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Networking;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
@@ -51,6 +52,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public AudioClip DeathSound;
         private bool Shot = false;
         public GameObject ExplosionUponDeath;
+        public GameObject UI;
+        public Image[] Life;
 
         // Use this for initialization
         private void Start()
@@ -59,6 +62,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (!isLocalPlayer)
             {
                 m_Camera.enabled = false;
+                UI.SetActive(false);
                 return;
             }
             if (isLocalPlayer)
@@ -84,6 +88,40 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
+            switch (PlayerHP)
+            {
+                case 4:
+                    Life[0].enabled = true;
+                    Life[1].enabled = true;
+                    Life[2].enabled = true;
+                    Life[3].enabled = true;
+                    break;
+                case 3:
+                    Life[0].enabled = true;
+                    Life[1].enabled = true;
+                    Life[2].enabled = true;
+                    Life[3].enabled = false;
+                    break;
+                case 2:
+                    Life[0].enabled = true;
+                    Life[1].enabled = true;
+                    Life[2].enabled = false;
+                    Life[3].enabled = false;
+                    break;
+                case 1:
+                    Life[0].enabled = true;
+                    Life[1].enabled = false;
+                    Life[2].enabled = false;
+                    Life[3].enabled = false;
+                    break;
+                default:
+                    Life[0].enabled = false;
+                    Life[1].enabled = false;
+                    Life[2].enabled = false;
+                    Life[3].enabled = false;
+                    break;
+            }
+            
             if (!isLocalPlayer)
             {
                 return;

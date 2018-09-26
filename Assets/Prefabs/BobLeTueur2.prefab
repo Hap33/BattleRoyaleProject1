@@ -914,6 +914,7 @@ MonoBehaviour:
   DeathSound: {fileID: 8300000, guid: 9296fef2634663f468646387a6f8969a, type: 3}
   ExplosionUponDeath: {fileID: 1629641196512750, guid: f548ebf4c6964384a8ab6fe224c4d0cf,
     type: 2}
+  UI: {fileID: 1555274319616328}
 --- !u!114 &114154300860653526
 MonoBehaviour:
   m_ObjectHideFlags: 1
