@@ -375,20 +375,24 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public IEnumerator HideMyBeam()
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.1f);
             Laser.SetActive(false);
+            yield return new WaitForSeconds(0.5f);
             Shot = false;
         }
 
         public void GetLife(GameObject whatToDestroy)
         {
             PlayerHP += 1;
-            if(PlayerHP >= 4)
+            if(PlayerHP > 4)
             {
                 PlayerHP = 4;
-                return;
             }
-            CmdDestruction(whatToDestroy);
+            else
+            {
+                CmdDestruction(whatToDestroy);
+            }
+            
         }
     }
 }
