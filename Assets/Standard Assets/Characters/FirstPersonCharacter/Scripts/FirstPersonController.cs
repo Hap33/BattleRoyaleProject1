@@ -139,8 +139,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             if (other.CompareTag("Health"))
             {
-                GetLife();
-                CmdDestruction(other.gameObject);
+                GetLife(other.gameObject);
             }
         }
 
@@ -381,13 +380,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
             Shot = false;
         }
 
-        public void GetLife()
+        public void GetLife(GameObject whatToDestroy)
         {
             PlayerHP += 1;
             if(PlayerHP >= 4)
             {
                 PlayerHP = 4;
+                return;
             }
+            CmdDestruction(whatToDestroy);
         }
     }
 }
