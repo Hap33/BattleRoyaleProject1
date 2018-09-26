@@ -386,9 +386,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if(PlayerHP >= 4)
             {
                 PlayerHP = 4;
-                return;
             }
-            CmdDestruction(whatToDestroy);
+            else
+            {
+                CmdDestruction(whatToDestroy);
+            }
+            
         }
     }
 }
