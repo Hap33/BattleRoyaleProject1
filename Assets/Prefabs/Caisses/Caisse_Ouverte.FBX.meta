@@ -1,70 +1,14 @@
 fileFormatVersion: 2
-guid: fd8aabc8c8e93df47a025978292dd3e8
+guid: eefc4100f63615645b82179159158d93
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Capsule1
-    100002: Capsule1_White
-    100004: Capsule2
-    100006: Capsule2_White
-    100008: Capsule3
-    100010: Capsule3_White
-    100012: Capsule4
-    100014: Capsule4_White
-    100016: Medikit_Capsule
-    100018: Medikit_Capsule_White
-    100020: //RootNode
-    400000: Capsule1
-    400002: Capsule1_White
-    400004: Capsule2
-    400006: Capsule2_White
-    400008: Capsule3
-    400010: Capsule3_White
-    400012: Capsule4
-    400014: Capsule4_White
-    400016: Medikit_Capsule
-    400018: Medikit_Capsule_White
-    400020: //RootNode
-    2100000: Capsule1Mat
-    2100002: Capsule1_WhiteMat
-    2100004: Capsule2Mat
-    2100006: Capsule2_WhiteMat
-    2100008: Capsule3Mat
-    2100010: Capsule3_WhiteMat
-    2100012: Capsule4Mat
-    2100014: Capsule4_WhiteMat
-    2100016: Medikit_CapsuleMat
-    2100018: Medikit_Capsule_WhiteMat
-    2300000: Capsule1
-    2300002: Capsule1_White
-    2300004: Capsule2
-    2300006: Capsule2_White
-    2300008: Capsule3
-    2300010: Capsule3_White
-    2300012: Capsule4
-    2300014: Capsule4_White
-    2300016: Medikit_Capsule
-    2300018: Medikit_Capsule_White
-    3300000: Capsule1
-    3300002: Capsule1_White
-    3300004: Capsule2
-    3300006: Capsule2_White
-    3300008: Capsule3
-    3300010: Capsule3_White
-    3300012: Capsule4
-    3300014: Capsule4_White
-    3300016: Medikit_Capsule
-    3300018: Medikit_Capsule_White
-    4300000: Capsule1
-    4300002: Capsule1_White
-    4300004: Capsule2
-    4300006: Capsule2_White
-    4300008: Capsule3
-    4300010: Capsule3_White
-    4300012: Capsule4
-    4300014: Capsule4_White
-    4300016: Medikit_Capsule
-    4300018: Medikit_Capsule_White
+    100000: //RootNode
+    400000: //RootNode
+    2100000: No Name
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Caisse ouvert
   externalObjects: {}
   materials:
     importMaterials: 1
