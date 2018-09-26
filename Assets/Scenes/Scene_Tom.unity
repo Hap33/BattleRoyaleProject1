@@ -5467,7 +5467,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3d36d17c2342a794fafa4a3ce7cfac64, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3d36d17c2342a794fafa4a3ce7cfac64, type: 3}
       propertyPath: m_LocalScale.x
@@ -6480,6 +6480,75 @@ Transform:
   m_Father: {fileID: 694640274}
   m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
+--- !u!1 &370547928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 370547929}
+  - component: {fileID: 370547931}
+  - component: {fileID: 370547930}
+  m_Layer: 5
+  m_Name: Pillule_BlancBleu4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &370547929
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 370547928}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000075, y: 1.0000075, z: 1.0000075}
+  m_Children: []
+  m_Father: {fileID: 939047845}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
+  m_AnchorMin: {x: 0.55756253, y: 0.028510116}
+  m_AnchorMax: {x: 0.61300004, y: 0.09012247}
+  m_AnchoredPosition: {x: -0.80000305, y: 1.5}
+  m_SizeDelta: {x: 0.2999878, y: -1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &370547930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 370547928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 57d77c08192eacb42aab7bcc03b23b2a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &370547931
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 370547928}
+  m_CullTransparentMesh: 0
 --- !u!1 &370944910
 GameObject:
   m_ObjectHideFlags: 0
@@ -7679,6 +7748,75 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: e39f48d9be126e34b9fb7db87be516ec, type: 3}
+--- !u!1 &418042812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 418042813}
+  - component: {fileID: 418042815}
+  - component: {fileID: 418042814}
+  m_Layer: 5
+  m_Name: Pillule_BlancBleu1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &418042813
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 418042812}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000075, y: 1.0000075, z: 1.0000075}
+  m_Children: []
+  m_Father: {fileID: 939047845}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
+  m_AnchorMin: {x: 0.38452083, y: 0.028510116}
+  m_AnchorMax: {x: 0.441, y: 0.09012247}
+  m_AnchoredPosition: {x: 0.3999939, y: 1.5}
+  m_SizeDelta: {x: 0.2999878, y: -1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &418042814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 418042812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 57d77c08192eacb42aab7bcc03b23b2a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &418042815
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 418042812}
+  m_CullTransparentMesh: 0
 --- !u!1 &418354492
 GameObject:
   m_ObjectHideFlags: 0
@@ -9448,7 +9586,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3d36d17c2342a794fafa4a3ce7cfac64, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3d36d17c2342a794fafa4a3ce7cfac64, type: 3}
       propertyPath: m_LocalScale.x
@@ -13276,12 +13414,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 939047845}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -709.67, y: -387}
-  m_SizeDelta: {x: 386.56, y: 85.58}
+  m_AnchorMin: {x: 0.030000001, y: 0.017265175}
+  m_AnchorMax: {x: 0.23175, y: 0.114652835}
+  m_AnchoredPosition: {x: -1.1699829, y: 0.5}
+  m_SizeDelta: {x: -0.44000244, y: -1.4199829}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &677382820
 MonoBehaviour:
@@ -13295,7 +13433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.9342535, b: 0.9433962, a: 1}
+  m_Color: {r: 0.37254903, g: 1, b: 0.40644598, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -13304,7 +13442,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: fbe73dcbb6f05804984006ce495276c9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -15543,7 +15681,7 @@ GameObject:
   - component: {fileID: 772683332}
   - component: {fileID: 772683331}
   m_Layer: 5
-  m_Name: Pillule_BlancBleu
+  m_Name: Pillule_BlancBleu2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18108,7 +18246,9 @@ RectTransform:
   m_Children:
   - {fileID: 400520874}
   - {fileID: 772683330}
+  - {fileID: 418042813}
   - {fileID: 1917735546}
+  - {fileID: 370547929}
   - {fileID: 677382819}
   m_Father: {fileID: 0}
   m_RootOrder: 20
@@ -19648,7 +19788,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3d36d17c2342a794fafa4a3ce7cfac64, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3d36d17c2342a794fafa4a3ce7cfac64, type: 3}
       propertyPath: m_LocalScale.x
@@ -22461,7 +22601,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 87cd0b2199d3d874f865e363208fc337, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87cd0b2199d3d874f865e363208fc337, type: 3}
@@ -32000,7 +32140,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 30bbd92172ba3824f9f66e65ce295898, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 30bbd92172ba3824f9f66e65ce295898, type: 3}
       propertyPath: m_Name
@@ -32320,7 +32460,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3d36d17c2342a794fafa4a3ce7cfac64, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3d36d17c2342a794fafa4a3ce7cfac64, type: 3}
       propertyPath: m_LocalScale.x
@@ -33424,7 +33564,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 1335da9380bcbce419d2849395b3ef16, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 1335da9380bcbce419d2849395b3ef16, type: 3}
       propertyPath: m_Name
@@ -35932,7 +36072,7 @@ GameObject:
   - component: {fileID: 1917735548}
   - component: {fileID: 1917735547}
   m_Layer: 5
-  m_Name: Pillule_BlancBleu2
+  m_Name: Pillule_BlancBleu3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35949,7 +36089,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000075, y: 1.0000075, z: 1.0000075}
   m_Children: []
   m_Father: {fileID: 939047845}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
   m_AnchorMin: {x: 0.5, y: 0.03187753}
   m_AnchorMax: {x: 0.55600005, y: 0.09012247}
