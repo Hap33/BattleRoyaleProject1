@@ -49,6 +49,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public AudioListener Ears;
         public AudioClip LaserSound;
         private bool Shot = false;
+        public GameObject ExplosionUponDeath;
 
         // Use this for initialization
         private void Start()
@@ -349,6 +350,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             if(myNewHP == 0)
             {
+                RpcLastLaugh();
                 NetworkServer.UnSpawn(gameObject);
                 Destroy(gameObject);
             }
@@ -364,6 +366,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             Laser.SetActive(true);
             StartCoroutine(HideMyBeam());
+        }
+
+        [ClientRpc]
+        public void RpcLastLaugh()
+        {
+            Instantiate(ExplosionUponDeath, transform);
         }
 
         [ClientRpc]
