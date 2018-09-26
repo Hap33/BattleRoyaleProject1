@@ -123,6 +123,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
+        /*private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Health"))
+            {
+                GetLife();
+                CmdDestruction(other.gameObject);
+            }
+        }*/
 
         private void PlayLandingSound()
         {
@@ -313,6 +321,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             opponent.GetComponent<FirstPersonController>().TakeDamage();
         }
+        /*[Command]
+        public void CmdDestruction(GameObject theHealth)
+        {
+            Debug.Log("Etape 1");
+            RpcDestroyBonus(theHealth);
+        }*/
+        
         public void UpdateHP(int myNewHP)
         {
             if (isLocalPlayer)
@@ -335,11 +350,27 @@ namespace UnityStandardAssets.Characters.FirstPerson
             Laser.SetActive(true);
             StartCoroutine(HideMyBeam());
         }
+        /*[ClientRpc]
+        public void RpcDestroyBonus(GameObject bonus)
+        {
+            Debug.Log("Etape2");
+            NetworkServer.UnSpawn(bonus);
+            NetworkServer.Destroy(bonus);
+        }*/
         public IEnumerator HideMyBeam()
         {
             yield return new WaitForSeconds(0.5f);
             Laser.SetActive(false);
             Shot = false;
+        }
+
+        public void GetLife()
+        {
+            PlayerHP += 1;
+            if(PlayerHP >= 2)
+            {
+                PlayerHP = 2;
+            }
         }
     }
 }
