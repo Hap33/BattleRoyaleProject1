@@ -53,7 +53,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Use this for initialization
         private void Start()
         {
-            PlayerHP = 2;
+            PlayerHP = 4;
             if (!isLocalPlayer)
             {
                 m_Camera.enabled = false;
@@ -123,14 +123,26 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
-        /*private void OnTriggerEnter(Collider other)
+        /*private void OnCollisionEnter(Collision collision)
         {
+            if (collision.gameObject.tag == "DeathPlane")
+            {
+                PlayerHP = 0;
+            }
+        }*/
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.tag == "DeathPlane")
+            {
+                PlayerHP = 0;
+            }
             if (other.CompareTag("Health"))
             {
                 GetLife();
                 CmdDestruction(other.gameObject);
             }
-        }*/
+        }
 
         private void PlayLandingSound()
         {
@@ -311,22 +323,24 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
         }
+
         [Command]
         public void CmdDisplayLaserBeam()
         {
             RpcShowMyBeam();
         }
+
         [Command]
         public void CmdHitOpponent(GameObject opponent)
         {
             opponent.GetComponent<FirstPersonController>().TakeDamage();
         }
-        /*[Command]
+
+        [Command]
         public void CmdDestruction(GameObject theHealth)
         {
-            Debug.Log("Etape 1");
             RpcDestroyBonus(theHealth);
-        }*/
+        }
         
         public void UpdateHP(int myNewHP)
         {
@@ -340,23 +354,26 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 Destroy(gameObject);
             }
         }
+
         public void TakeDamage()
         {
             PlayerHP -= 1;
         }
+
         [ClientRpc]
         public void RpcShowMyBeam()
         {
             Laser.SetActive(true);
             StartCoroutine(HideMyBeam());
         }
-        /*[ClientRpc]
+
+        [ClientRpc]
         public void RpcDestroyBonus(GameObject bonus)
         {
-            Debug.Log("Etape2");
             NetworkServer.UnSpawn(bonus);
             NetworkServer.Destroy(bonus);
-        }*/
+        }
+
         public IEnumerator HideMyBeam()
         {
             yield return new WaitForSeconds(0.5f);
@@ -367,9 +384,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public void GetLife()
         {
             PlayerHP += 1;
-            if(PlayerHP >= 2)
+            if(PlayerHP >= 4)
             {
-                PlayerHP = 2;
+                PlayerHP = 4;
             }
         }
     }

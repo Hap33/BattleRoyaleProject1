@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Opponent
   - Health
+  - DeathPlane
   layers:
   - Default
   - TransparentFX
