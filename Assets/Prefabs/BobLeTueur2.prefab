@@ -188,7 +188,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1797325568004902}
-  m_LocalRotation: {x: -0.023575705, y: -0.007904165, z: 0.03265189, w: 0.9991575}
+  m_LocalRotation: {x: -0.017306825, y: -0.020977404, z: 0.0330851, w: 0.9990825}
   m_LocalPosition: {x: 0.34, y: -0.35, z: 0.58283305}
   m_LocalScale: {x: 9.718965, y: 9.718957, z: 9.718956}
   m_Children:
@@ -197,7 +197,7 @@ Transform:
   - {fileID: 4970449040292842}
   m_Father: {fileID: 4525145361864508}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -2.6710002, y: -0.994, z: 3.7670002}
+  m_LocalEulerAnglesHint: {x: -1.9020001, y: -2.469, z: 3.834}
 --- !u!4 &4664174417559548
 Transform:
   m_ObjectHideFlags: 1
@@ -762,6 +762,7 @@ MonoBehaviour:
   m_Camera: {fileID: 20255951838418560}
   Laser: {fileID: 1519489017277068}
   Ears: {fileID: 81114592088190416}
+  LaserSound: {fileID: 8300000, guid: bd0fc16d0aad97e46a47fc4b6a76b267, type: 3}
 --- !u!114 &114742358188282586
 MonoBehaviour:
   m_ObjectHideFlags: 1

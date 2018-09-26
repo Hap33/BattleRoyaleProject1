@@ -47,6 +47,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
         public AudioListener Ears;
+        public AudioClip LaserSound;
+        private bool Shot = false;
 
         // Use this for initialization
         private void Start()
@@ -105,10 +107,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
             Ray ray = m_Camera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && Shot == false)
             {
                 RaycastHit hit;
+                Shot = true;
                 CmdDisplayLaserBeam();
+                m_AudioSource.PlayOneShot(LaserSound);
                 if (Physics.Raycast(ray, out hit, 10f))
                 {
                     if (hit.collider.CompareTag("Opponent"))
@@ -335,6 +339,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             yield return new WaitForSeconds(0.5f);
             Laser.SetActive(false);
+            Shot = false;
         }
     }
 }
