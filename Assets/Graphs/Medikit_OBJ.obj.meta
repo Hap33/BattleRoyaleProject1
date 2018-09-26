@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8d5b01b3d3fdb444c97d6860a7878311
+guid: 3de8e0d02d620c44786a323d2de25086
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -11,9 +11,9 @@ ModelImporter:
     100010: Capsule3_White
     100012: Capsule4
     100014: Capsule4_White
-    100016: Medikit_Capsule
-    100018: Medikit_Capsule_White
-    100020: //RootNode
+    100016: //RootNode
+    100018: Medikit_Capsule
+    100020: Medikit_Capsule_White
     400000: Capsule1
     400002: Capsule1_White
     400004: Capsule2
@@ -22,9 +22,9 @@ ModelImporter:
     400010: Capsule3_White
     400012: Capsule4
     400014: Capsule4_White
-    400016: Medikit_Capsule
-    400018: Medikit_Capsule_White
-    400020: //RootNode
+    400016: //RootNode
+    400018: Medikit_Capsule
+    400020: Medikit_Capsule_White
     2100000: Capsule1Mat
     2100002: Capsule1_WhiteMat
     2100004: Capsule2Mat
