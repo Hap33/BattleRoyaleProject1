@@ -383,7 +383,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public void GetLife(GameObject whatToDestroy)
         {
             PlayerHP += 1;
-            if(PlayerHP >= 4)
+            if(PlayerHP > 4)
             {
                 PlayerHP = 4;
             }
