@@ -53,7 +53,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool Shot = false;
         public GameObject ExplosionUponDeath;
         public GameObject UI;
-        public Image[] Life;
+        public Image[] Life = new Image [4];
 
         // Use this for initialization
         private void Start()
