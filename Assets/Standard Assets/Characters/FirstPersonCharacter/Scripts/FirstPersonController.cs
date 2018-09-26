@@ -48,6 +48,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private AudioSource m_AudioSource;
         public AudioListener Ears;
         public AudioClip LaserSound;
+        public AudioClip DeathSound;
         private bool Shot = false;
         public GameObject ExplosionUponDeath;
 
@@ -351,6 +352,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if(myNewHP == 0)
             {
                 RpcLastLaugh();
+                m_AudioSource.PlayOneShot(DeathSound);
                 NetworkServer.UnSpawn(gameObject);
                 Destroy(gameObject);
             }

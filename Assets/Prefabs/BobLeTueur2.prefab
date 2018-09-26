@@ -911,6 +911,7 @@ MonoBehaviour:
   Laser: {fileID: 1519489017277068}
   Ears: {fileID: 81114592088190416}
   LaserSound: {fileID: 8300000, guid: bd0fc16d0aad97e46a47fc4b6a76b267, type: 3}
+  DeathSound: {fileID: 8300000, guid: 9296fef2634663f468646387a6f8969a, type: 3}
   ExplosionUponDeath: {fileID: 1629641196512750, guid: f548ebf4c6964384a8ab6fe224c4d0cf,
     type: 2}
 --- !u!114 &114154300860653526
