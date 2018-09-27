@@ -90,11 +90,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.K))
-            {
-                TakeDamage();
-            }
-
             NumbPlayers.text = "joueurs restants : " + CheckPlayers.Singleton.PlayerNmb.ToString();
 
             if (!isLocalPlayer)
@@ -135,6 +130,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
                         CmdHitOpponent(hit.collider.gameObject);
                     }
                 }
+            }
+
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                TakeDamage();
             }
         }
 
