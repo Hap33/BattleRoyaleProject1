@@ -97,7 +97,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             RotateView();
-            // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
@@ -362,7 +361,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 RpcLastLaugh();
                 m_AudioSource.PlayOneShot(DeathSound);
-                RPCKillMe();
+                RpcKillMe();
             }
         }
 
@@ -391,7 +390,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
         [ClientRpc]
-        public void RPCKillMe()
+        public void RpcKillMe()
         {
             NetworkServer.UnSpawn(this.gameObject);
             NetworkServer.Destroy(this.gameObject);
