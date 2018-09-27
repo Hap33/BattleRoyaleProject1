@@ -92,7 +92,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             NumbPlayers.text = "joueurs restants : " + NetworkServer.connections.Count;
             Life.fillAmount = PlayerHP * 0.25f;
-            
+            Debug.Log(PlayerHP);
             if (!isLocalPlayer)
             {
                 return;
