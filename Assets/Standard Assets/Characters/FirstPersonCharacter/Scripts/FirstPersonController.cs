@@ -54,10 +54,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public GameObject ExplosionUponDeath;
         public GameObject UI;
         public Image Life;
+        public Text NumbPlayers;
 
         // Use this for initialization
         private void Start()
         {
+            
+            
             if (!isLocalPlayer)
             {
                 m_Camera.enabled = false;
@@ -87,6 +90,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
+            NumbPlayers.text = "joueurs restants : " + NetworkServer.connections.Count;
             Life.fillAmount = PlayerHP * 0.25f;
             
             if (!isLocalPlayer)
@@ -352,7 +356,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             if (isLocalPlayer)
             {
-                Debug.Log(myNewHP);
+                //Debug.Log(myNewHP);
             }
             if(myNewHP == 0)
             {
