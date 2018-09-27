@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4758338398588016}
   - component: {fileID: 33184482260610022}
   - component: {fileID: 23917024132090950}
+  - component: {fileID: 64247789141671394}
   m_Layer: 0
   m_Name: Capsule4
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,7 +41,7 @@ GameObject:
   - component: {fileID: 114848181139881936}
   m_Layer: 0
   m_Name: Medikit
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,9 +56,10 @@ GameObject:
   - component: {fileID: 4854742946446210}
   - component: {fileID: 33942683307407312}
   - component: {fileID: 23964408254891354}
+  - component: {fileID: 64390699763445350}
   m_Layer: 0
   m_Name: Capsule2
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,9 +74,10 @@ GameObject:
   - component: {fileID: 4560643058872484}
   - component: {fileID: 33002526831642316}
   - component: {fileID: 23008156529744356}
+  - component: {fileID: 64971835299148892}
   m_Layer: 0
   m_Name: Capsule1
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,9 +92,10 @@ GameObject:
   - component: {fileID: 4975858760594214}
   - component: {fileID: 33315657328996586}
   - component: {fileID: 23291756002341662}
+  - component: {fileID: 64371372415637940}
   m_Layer: 0
   m_Name: Capsule4_White
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +113,7 @@ GameObject:
   - component: {fileID: 64778829010016578}
   m_Layer: 0
   m_Name: Medikit_Capsule
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,9 +128,10 @@ GameObject:
   - component: {fileID: 4985743581696386}
   - component: {fileID: 33655080772837388}
   - component: {fileID: 23621462264309012}
+  - component: {fileID: 64968634329316766}
   m_Layer: 0
   m_Name: Capsule2_White
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,9 +146,10 @@ GameObject:
   - component: {fileID: 4984281355692728}
   - component: {fileID: 33105427716875726}
   - component: {fileID: 23247243849723134}
+  - component: {fileID: 64420583018516986}
   m_Layer: 0
   m_Name: Capsule3
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,9 +164,10 @@ GameObject:
   - component: {fileID: 4470251398009454}
   - component: {fileID: 33664996226041104}
   - component: {fileID: 23593879539303150}
+  - component: {fileID: 64857981264950676}
   m_Layer: 0
   m_Name: Capsule1_White
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,9 +182,10 @@ GameObject:
   - component: {fileID: 4738226076689574}
   - component: {fileID: 33268491982528982}
   - component: {fileID: 23991658549181444}
+  - component: {fileID: 64939594178518434}
   m_Layer: 0
   m_Name: Capsule3_White
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,7 +203,7 @@ GameObject:
   - component: {fileID: 64909616719975892}
   m_Layer: 0
   m_Name: Medikit_Capsule_White
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,9 +227,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1125930154629974}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.3, y: 3.4, z: -55}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children:
   - {fileID: 4560643058872484}
   - {fileID: 4470251398009454}
@@ -788,6 +796,62 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &64247789141671394
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1072449729584850}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300012, guid: 3de8e0d02d620c44786a323d2de25086, type: 3}
+--- !u!64 &64371372415637940
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306675694983326}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300014, guid: 3de8e0d02d620c44786a323d2de25086, type: 3}
+--- !u!64 &64390699763445350
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160268683654798}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300004, guid: 3de8e0d02d620c44786a323d2de25086, type: 3}
+--- !u!64 &64420583018516986
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1370532103500806}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300008, guid: 3de8e0d02d620c44786a323d2de25086, type: 3}
 --- !u!64 &64778829010016578
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -802,6 +866,20 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300016, guid: 3de8e0d02d620c44786a323d2de25086, type: 3}
+--- !u!64 &64857981264950676
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1387356916091864}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: 3de8e0d02d620c44786a323d2de25086, type: 3}
 --- !u!64 &64909616719975892
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -816,6 +894,48 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300018, guid: 3de8e0d02d620c44786a323d2de25086, type: 3}
+--- !u!64 &64939594178518434
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1595480122008918}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300010, guid: 3de8e0d02d620c44786a323d2de25086, type: 3}
+--- !u!64 &64968634329316766
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1332192016602034}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300006, guid: 3de8e0d02d620c44786a323d2de25086, type: 3}
+--- !u!64 &64971835299148892
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1285999171210698}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 3de8e0d02d620c44786a323d2de25086, type: 3}
 --- !u!114 &114848181139881936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -827,6 +947,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a713e4e4ac7c54c8d6bbe6e13f5a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 1
-  hooveringSpeed: 3
-  distHoovering: 6
+  rotationSpeed: 2
+  hooveringSpeed: 1
+  distHoovering: 1
