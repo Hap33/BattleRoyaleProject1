@@ -53,7 +53,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool Shot = false;
         public GameObject ExplosionUponDeath;
         public GameObject UI;
-        public Image[] Life = new Image [4];
+        public Image Life;
 
         // Use this for initialization
         private void Start()
@@ -88,39 +88,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            switch (PlayerHP)
-            {
-                case 4:
-                    Life[0].enabled = true;
-                    Life[1].enabled = true;
-                    Life[2].enabled = true;
-                    Life[3].enabled = true;
-                    break;
-                case 3:
-                    Life[0].enabled = true;
-                    Life[1].enabled = true;
-                    Life[2].enabled = true;
-                    Life[3].enabled = false;
-                    break;
-                case 2:
-                    Life[0].enabled = true;
-                    Life[1].enabled = true;
-                    Life[2].enabled = false;
-                    Life[3].enabled = false;
-                    break;
-                case 1:
-                    Life[0].enabled = true;
-                    Life[1].enabled = false;
-                    Life[2].enabled = false;
-                    Life[3].enabled = false;
-                    break;
-                default:
-                    Life[0].enabled = false;
-                    Life[1].enabled = false;
-                    Life[2].enabled = false;
-                    Life[3].enabled = false;
-                    break;
-            }
+            Life.fillAmount = PlayerHP * 0.25f;
             
             if (!isLocalPlayer)
             {
@@ -425,7 +393,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             yield return new WaitForSeconds(0.1f);
             Laser.SetActive(false);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.3f);
             Shot = false;
         }
 
