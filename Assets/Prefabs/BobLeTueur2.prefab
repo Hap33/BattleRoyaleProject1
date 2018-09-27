@@ -125,6 +125,8 @@ GameObject:
   - component: {fileID: 33119174837866086}
   - component: {fileID: 23823649800531960}
   - component: {fileID: 136461696559402962}
+  - component: {fileID: 95130929085570362}
+  - component: {fileID: 114924367139856022}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -426,7 +428,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1886438921685780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8629668, y: 48.1, z: 7.775596}
+  m_LocalPosition: {x: 0.24524307, y: -0.2315507, z: -7.9190702}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4525145361864508}
@@ -1229,6 +1231,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95130929085570362
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1399079440362244}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 99e8185891bfe7d40991b499fd2da500, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95862788915532116
 Animator:
   serializedVersion: 3
@@ -1639,6 +1659,17 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114924367139856022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1399079440362244}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c99df3cacab19974783549e1ca82a460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!124 &124503077817130024
 Behaviour:
   m_ObjectHideFlags: 1
