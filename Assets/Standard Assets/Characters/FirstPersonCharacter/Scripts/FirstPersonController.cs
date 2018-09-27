@@ -32,7 +32,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
         [SyncVar(hook = "UpdateHP")]
-        public int PlayerHP;
+        public int PlayerHP = 4;
         public Camera m_Camera;
         public GameObject Laser;
         private bool m_Jump;
@@ -58,7 +58,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Use this for initialization
         private void Start()
         {
-            PlayerHP = 4;
             if (!isLocalPlayer)
             {
                 m_Camera.enabled = false;
