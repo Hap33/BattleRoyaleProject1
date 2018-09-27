@@ -92,7 +92,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             if (Input.GetKeyDown(KeyCode.K))
             {
-                PlayerHP -= 1;
+                TakeDamage();
             }
 
             NumbPlayers.text = "joueurs restants : " + CheckPlayers.Singleton.PlayerNmb.ToString();
@@ -146,7 +146,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             if (other.CompareTag("Health"))
             {
-                GetLife(other.gameObject);
+                TakePill(other.gameObject);
             }
         }
 
@@ -343,6 +343,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
         [Command]
+        public void TakePill(GameObject pill)
+        {
+            if (PlayerHP < 4)
+            {
+                PlayerHP += 1;
+                CmdDestruction(pill);
+            }
+        }
+
+        [Command]
         public void CmdDestruction(GameObject theHealth)
         {
             RpcDestroyBonus(theHealth);
@@ -393,16 +403,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             Laser.SetActive(false);
             yield return new WaitForSeconds(0.3f);
             Shot = false;
-        }
-
-        public void GetLife(GameObject whatToDestroy)
-        {
-            if(PlayerHP < 4)
-            {
-                PlayerHP += 1;
-                CmdDestruction(whatToDestroy);
-            }
-
         }
     }
 }
