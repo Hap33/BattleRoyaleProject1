@@ -90,6 +90,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                PlayerHP -= 1;
+            }
             NumbPlayers.text = "joueurs restants : " + CheckPlayers.Singleton.PlayerNmb.ToString(); ;
             Life.fillAmount = PlayerHP * 0.25f;
             if (!isLocalPlayer)
@@ -387,8 +391,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [ClientRpc]
         public void RpcDestroyBonus(GameObject bonus)
         {
-            NetworkServer.UnSpawn(bonus);
-            bonus.SetActive(false);
+            NetworkServer.Destroy(bonus);
         }
 
         public IEnumerator HideMyBeam()
@@ -401,16 +404,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public void GetLife(GameObject whatToDestroy)
         {
-            PlayerHP += 1;
-            if(PlayerHP > 4)
+            if(PlayerHP < 4)
             {
-                PlayerHP = 4;
-            }
-            else
-            {
+                PlayerHP += 1;
                 CmdDestruction(whatToDestroy);
             }
-            
+
         }
     }
 }
