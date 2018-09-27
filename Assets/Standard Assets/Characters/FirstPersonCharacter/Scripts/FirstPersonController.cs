@@ -134,7 +134,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             if (Input.GetKeyDown(KeyCode.K))
             {
-                TakeDamage();
+                Debug.Log("Aïe !");
+                ModifyHP(-1);
             }
         }
 
@@ -144,9 +145,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 PlayerHP = 0;
             }
-            if (other.CompareTag("Health"))
+            if (other.CompareTag("Health") && PlayerHP < 4)
             {
-                CmdTakePill(other.gameObject);
+                CmdTakePill(this.gameObject, other.gameObject);
             }
         }
 
@@ -339,23 +340,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [Command]
         public void CmdHitOpponent(GameObject opponent)
         {
-            opponent.GetComponent<FirstPersonController>().TakeDamage();
+            opponent.GetComponent<FirstPersonController>().ModifyHP(-1);
         }
 
-        [Command]
-        public void CmdTakePill(GameObject pill)
+        [Command] 
+        public void CmdTakePill(GameObject player, GameObject pill)
         {
-            if (PlayerHP < 4)
-            {
-                PlayerHP += 1;
-                CmdDestruction(pill);
-            }
-        }
-
-        [Command]
-        public void CmdDestruction(GameObject theHealth)
-        {
-            RpcDestroyBonus(theHealth);
+            player.GetComponent<FirstPersonController>().ModifyHP(1);
+            RpcDestroyBonus(pill);
         }
         
         public void UpdateHP(int myNewHP)
@@ -375,9 +367,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
-        public void TakeDamage()
+        public void ModifyHP(int value)
         {
-            PlayerHP -= 1;
+            PlayerHP += value;
         }
 
         [ClientRpc]
