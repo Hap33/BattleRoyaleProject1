@@ -81,11 +81,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
         }
+
         public override void OnStartLocalPlayer()
         {
             Ears.enabled = true;
         }
-
 
         // Update is called once per frame
         private void Update()
@@ -94,8 +94,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 PlayerHP -= 1;
             }
-            NumbPlayers.text = "joueurs restants : " + CheckPlayers.Singleton.PlayerNmb.ToString(); ;
-            Life.fillAmount = PlayerHP * 0.25f;
+
+            NumbPlayers.text = "joueurs restants : " + CheckPlayers.Singleton.PlayerNmb.ToString();
+
             if (!isLocalPlayer)
             {
                 return;
@@ -136,14 +137,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
             }
         }
-
-        /*private void OnCollisionEnter(Collision collision)
-        {
-            if (collision.gameObject.tag == "DeathPlane")
-            {
-                PlayerHP = 0;
-            }
-        }*/
 
         private void OnTriggerEnter(Collider other)
         {
@@ -357,11 +350,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         
         public void UpdateHP(int myNewHP)
         {
-            if (isLocalPlayer)
-            {
-                //Debug.Log(myNewHP);
-            }
-            if(myNewHP == 0)
+            PlayerHP = myNewHP;
+
+            Life.fillAmount = PlayerHP * 0.25f;
+
+            if (myNewHP == 0)
             {
                 RpcLastLaugh();
                 m_AudioSource.PlayOneShot(DeathSound);
