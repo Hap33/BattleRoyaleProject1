@@ -90,9 +90,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            NumbPlayers.text = "joueurs restants : " + NetworkServer.connections.Count;
+            NumbPlayers.text = "joueurs restants : " + CheckPlayers.Singleton.PlayerNmb.ToString(); ;
             Life.fillAmount = PlayerHP * 0.25f;
-            Debug.Log(PlayerHP);
             if (!isLocalPlayer)
             {
                 return;
@@ -360,6 +359,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             if(myNewHP == 0)
             {
+                CheckPlayers.Singleton.PlayerNmb -= 1;
                 RpcLastLaugh();
                 m_AudioSource.PlayOneShot(DeathSound);
                 NetworkServer.UnSpawn(gameObject);

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class CheckPlayers : MonoBehaviour {
     public static CheckPlayers Singleton;
-    //public int PlayerNmb;
+    public int PlayerNmb;
     public Text Players;
 
     private void Awake()
@@ -22,13 +22,13 @@ public class CheckPlayers : MonoBehaviour {
         
     }
 
-    /*private void Start()
+    private void Start()
     {
-        PlayerNmb = NetworkServer.connections.Count;
-    }*/
+         PlayerNmb = NetworkServer.connections.Count;
+    }
 
     private void Update()
     {
-        Players.text = "joueurs restants :  : " + NetworkServer.connections.Count;
+        Players.text = "joueurs restants :  : " + PlayerNmb.ToString();
     }
 }
