@@ -146,7 +146,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             if (other.CompareTag("Health"))
             {
-                TakePill(other.gameObject);
+                CmdTakePill(other.gameObject);
             }
         }
 
@@ -343,7 +343,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
         [Command]
-        public void TakePill(GameObject pill)
+        public void CmdTakePill(GameObject pill)
         {
             if (PlayerHP < 4)
             {
@@ -360,16 +360,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
         
         public void UpdateHP(int myNewHP)
         {
-            PlayerHP = myNewHP;
-
-            Life.fillAmount = PlayerHP * 0.25f;
+            if (isLocalPlayer)
+            {
+                PlayerHP = myNewHP;
+                Life.fillAmount = PlayerHP * 0.25f;
+            }
 
             if (myNewHP == 0)
             {
                 RpcLastLaugh();
                 m_AudioSource.PlayOneShot(DeathSound);
-                NetworkServer.UnSpawn(gameObject);
-                Destroy(gameObject);
+                NetworkServer.UnSpawn(this.gameObject);
+                NetworkServer.Destroy(this.gameObject);
             }
         }
 
