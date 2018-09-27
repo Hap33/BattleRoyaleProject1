@@ -362,8 +362,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 RpcLastLaugh();
                 m_AudioSource.PlayOneShot(DeathSound);
-                NetworkServer.UnSpawn(this.gameObject);
-                NetworkServer.Destroy(this.gameObject);
+                RPCKillMe();
             }
         }
 
@@ -392,7 +391,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
         [ClientRpc]
-        public 
+        public void RPCKillMe()
+        {
+            NetworkServer.UnSpawn(this.gameObject);
+            NetworkServer.Destroy(this.gameObject);
+        }
 
         public IEnumerator HideMyBeam()
         {
