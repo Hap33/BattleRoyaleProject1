@@ -389,7 +389,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public void RpcDestroyBonus(GameObject bonus)
         {
             NetworkServer.UnSpawn(bonus);
-            Destroy(bonus);
+            bonus.SetActive(false);
         }
 
         public IEnumerator HideMyBeam()
