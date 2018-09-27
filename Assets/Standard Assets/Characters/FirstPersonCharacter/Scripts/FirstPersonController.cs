@@ -135,7 +135,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (Input.GetKeyDown(KeyCode.K))
             {
                 Debug.Log("Aïe !");
-                ModifyHP(-1);
+                CmdHitOpponent(this.gameObject);
             }
         }
 
@@ -390,6 +390,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             NetworkServer.Destroy(bonus);
         }
+
+        [ClientRpc]
+        public 
 
         public IEnumerator HideMyBeam()
         {
