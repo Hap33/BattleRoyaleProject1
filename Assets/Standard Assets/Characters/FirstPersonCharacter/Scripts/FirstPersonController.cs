@@ -359,7 +359,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             if(myNewHP == 0)
             {
-                CheckPlayers.Singleton.PlayerNmb -= 1;
                 RpcLastLaugh();
                 m_AudioSource.PlayOneShot(DeathSound);
                 NetworkServer.UnSpawn(gameObject);
