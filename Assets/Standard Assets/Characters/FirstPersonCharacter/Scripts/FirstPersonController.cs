@@ -352,13 +352,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         
         public void UpdateHP(int myNewHP)
         {
-            Debug.Log("PlayerHP : " + PlayerHP + " | myNewHP : " + myNewHP);
-
             if (isLocalPlayer)
             {
                 PlayerHP = myNewHP;
                 Life.fillAmount = PlayerHP * 0.25f;
             }
+
+            Debug.Log("PlayerHP : " + PlayerHP + " | myNewHP : " + myNewHP);
 
             if (myNewHP == 0)
             {
