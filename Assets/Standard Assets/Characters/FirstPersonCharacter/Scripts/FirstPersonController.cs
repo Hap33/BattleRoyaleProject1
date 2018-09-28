@@ -352,6 +352,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         
         public void UpdateHP(int myNewHP)
         {
+            Debug.Log("PlayerHP : " + PlayerHP + " | myNewHP : " + myNewHP);
+
             if (isLocalPlayer)
             {
                 PlayerHP = myNewHP;
