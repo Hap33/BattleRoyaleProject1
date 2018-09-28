@@ -150,8 +150,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 PlayerHP = 0;
             }
-            if (other.CompareTag("Health") && PlayerHP < 4)
+            if (other.CompareTag("Health") && PlayerHP < 4 && isLocalPlayer)
             {
+                Debug.Log(PlayerHP);
                 CmdTakePill(this.gameObject, other.gameObject);
             }
         }
@@ -352,7 +353,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public void CmdTakePill(GameObject player, GameObject pill)
         {
             player.GetComponent<FirstPersonController>().ModifyHP(1);
-            Debug.Log(PlayerHP);
             RpcDestroyBonus(pill);
         }
         
