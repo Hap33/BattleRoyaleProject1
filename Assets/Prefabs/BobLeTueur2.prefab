@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 4664174417559548}
   - component: {fileID: 33119174837866086}
   - component: {fileID: 23823649800531960}
-  - component: {fileID: 136461696559402962}
   - component: {fileID: 95130929085570362}
   - component: {fileID: 114924367139856022}
   m_Layer: 0
@@ -347,7 +346,6 @@ GameObject:
   - component: {fileID: 82837337294908868}
   - component: {fileID: 114835612006322990}
   - component: {fileID: 114742358188282586}
-  - component: {fileID: 136178732198650450}
   m_Layer: 0
   m_Name: BobLeTueur2
   m_TagString: Opponent
@@ -1677,19 +1675,6 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1946488155620120}
   m_Enabled: 1
---- !u!136 &136178732198650450
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1886438921685780}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.6
-  m_Height: 2.2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136293949910172038
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -1699,19 +1684,6 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 0
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136461696559402962
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1399079440362244}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
