@@ -136,6 +136,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 Debug.Log("Aïe !");
                 CmdHitOpponent(this.gameObject);
             }
+
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                Debug.Log("Cool !");
+                CmdTakePill(this.gameObject, null);
+            }
         }
 
         private void OnTriggerEnter(Collider other)
@@ -346,6 +352,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public void CmdTakePill(GameObject player, GameObject pill)
         {
             player.GetComponent<FirstPersonController>().ModifyHP(1);
+            Debug.Log(PlayerHP);
             RpcDestroyBonus(pill);
         }
         
@@ -354,7 +361,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (isLocalPlayer)
             {
                 PlayerHP = myNewHP;
-                Debug.Log(PlayerHP);
                 Life.fillAmount = PlayerHP * 0.25f;
             }
 
