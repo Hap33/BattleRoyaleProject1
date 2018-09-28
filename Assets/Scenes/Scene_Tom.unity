@@ -473,6 +473,46 @@ Prefab:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 114263261737668344, guid: 33be37cff7cbc2c47a5bc544a9c2f6cc,
+        type: 2}
+      propertyPath: m_LocalPlayerAuthority
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114595379573185212, guid: 33be37cff7cbc2c47a5bc544a9c2f6cc,
+        type: 2}
+      propertyPath: m_LocalPlayerAuthority
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114639823931981024, guid: 33be37cff7cbc2c47a5bc544a9c2f6cc,
+        type: 2}
+      propertyPath: m_LocalPlayerAuthority
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114641120541423454, guid: 33be37cff7cbc2c47a5bc544a9c2f6cc,
+        type: 2}
+      propertyPath: m_LocalPlayerAuthority
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114342831669618006, guid: 33be37cff7cbc2c47a5bc544a9c2f6cc,
+        type: 2}
+      propertyPath: m_LocalPlayerAuthority
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114999414456497108, guid: 33be37cff7cbc2c47a5bc544a9c2f6cc,
+        type: 2}
+      propertyPath: m_LocalPlayerAuthority
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950913890063660, guid: 33be37cff7cbc2c47a5bc544a9c2f6cc,
+        type: 2}
+      propertyPath: m_LocalPlayerAuthority
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114742323934697358, guid: 33be37cff7cbc2c47a5bc544a9c2f6cc,
+        type: 2}
+      propertyPath: m_LocalPlayerAuthority
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33be37cff7cbc2c47a5bc544a9c2f6cc, type: 2}
   m_IsPrefabAsset: 0

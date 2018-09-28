@@ -354,6 +354,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (isLocalPlayer)
             {
                 PlayerHP = myNewHP;
+                Debug.Log(PlayerHP);
                 Life.fillAmount = PlayerHP * 0.25f;
             }
 
