@@ -130,18 +130,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     }
                 }
             }
-
-            if (Input.GetKeyDown(KeyCode.K))
-            {
-                Debug.Log("Aïe !");
-                CmdHitOpponent(this.gameObject);
-            }
-
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                Debug.Log("Cool !");
-                CmdTakePill(this.gameObject, null);
-            }
         }
 
         private void OnTriggerEnter(Collider other)
@@ -355,6 +343,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             player.GetComponent<FirstPersonController>().ModifyHP(1);
             RpcDestroyBonus(pill);
         }
+
+        [Command]
+        public void CmdKillPlayer()
+        {
+            RpcKillMe();
+        }
         
         public void UpdateHP(int myNewHP)
         {
@@ -366,9 +360,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             if (myNewHP == 0)
             {
-                RpcLastLaugh();
                 m_AudioSource.PlayOneShot(DeathSound);
-                RpcKillMe();
+                CmdKillPlayer();
             }
         }
 
@@ -385,12 +378,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
         [ClientRpc]
-        public void RpcLastLaugh()
-        {
-            Instantiate(ExplosionUponDeath, transform);
-        }
-
-        [ClientRpc]
         public void RpcDestroyBonus(GameObject bonus)
         {
             NetworkServer.Destroy(bonus);
@@ -399,8 +386,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [ClientRpc]
         public void RpcKillMe()
         {
-            NetworkServer.UnSpawn(this.gameObject);
-            NetworkServer.Destroy(this.gameObject);
+            Instantiate(ExplosionUponDeath, transform);
+            NetworkServer.UnSpawn(gameObject);
+            NetworkServer.Destroy(gameObject);
         }
 
         public IEnumerator HideMyBeam()
